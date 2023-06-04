@@ -1,0 +1,14 @@
+npm install,
+npm init,
+npm install express
+
+
+reinicia o server sempre que auterar uma propriedade no script
+npm install -g nodemon
+npm install --save-dev nodemon
+
+modulo de js para acessar Banco de dados 
+npm install --save sequelize
+
+drive mysql
+npm install --save mysql2
