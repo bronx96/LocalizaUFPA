@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LocalizaUFPA</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-body-tertiary">
+    <header><nav>
+        <!-- Navbar content -->
+      </nav></header>
+    <div class="container">
+    <main>
+        <div>
+            <form action="*">
+                <div id="localidade">
+                    <h2>
+                        Registrar Local
+                    </h2>
+                    <p><input class="form-control" type="text" name="Nome" id="Nome" placeholder="Nome"></p>
+                    <p><input class="form-control" type="text" name="longitude" id="longitude" placeholder="Longitude"></p>
+                    <p><input class="form-control" type="text" name="latitude" id="latitude" placeholder="Latitude"></p> 
+                    <div class="row">
+                    <div class="col-md-8"><input class="form-control" type="text" name="Origem" id="Origen" placeholder="Origem"></div>
+                    <div class="col-md-4"><select class="form-select">
+                        <option selected>Andar</option>
+                        <option value="10">Terreo</option>
+                        <option value="1">Primeiro</option>
+                        <option value="2">Segundo</option>
+                        <option value="3">Terceiro</option>
+                        <option value="4">Quarto</option>
+                        <option value="5">Quinto</option>
+                        <option value="6">Sexto</option>
+                        <option value="7">Setimo</option>
+                        <option value="8">Oitavo</option>
+                        <option value="9">Nono</option>
+                    </select></div>
+                    </div><br>
+                    <p><select class="form-select">
+                        <option selected> Tipo de Localidade</option>
+                        <option value="1">Aula</option>
+                        <option value="2">Administrativo</option>
+                        <option value="3">Alimentação</option>
+                        <option value="4">Portão</option>
+                    </select></p>
+                    <div class="row">
+                        <div class="col">
+                            <select class="form-select">
+                                <option selected>Setor</option>
+                                <option value="1">Básico</option>
+                                <option value="2">Profissional</option>
+                                <option value="3">Saúde</option>
+                            </select>
+                        </div>
+                        <div class="col"><select class="form-select">
+                            <option selected>Potão</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div id="Contato">
+                    <p><h2>Contato</h2> (Opcional)</p>
+                    <input type="text" name="telefone" class="form-control" placeholder="telefone"><br>
+                    <input type="text" name="email" class="form-control" placeholder="email"><br>
+                    <input type="text" name="twitter" class="form-control" placeholder="twitter"><br>
+                    <input type="text" name="instagran" class="form-control" placeholder="instagran"><br>
+                </div>
+
+                <button type="button" class="btn btn-primary">enviar</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        Marcos Rabelo|2023
+    </footer>
+    </div>
+</body>
+</html>
