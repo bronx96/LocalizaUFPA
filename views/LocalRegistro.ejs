@@ -1,81 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>LocalizaUFPA</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/style.css">
-</head>
+    <%- include ('./partials/head.ejs')%>
 <body class="bg-body-tertiary">
-    <header><nav>
-        <!-- Navbar content -->
-      </nav></header>
+    <!-- Esse recurso se chama partials e permite comolocar trechos de codigo em outros arquivos para evitar tepetir codigos  va na pasta views/partials para auterar-->
+    <header><%- include ('./partials/nav.ejs')%></header>
     <div class="container">
     <main>
-        <div>
-            <form action="*">
-                <div id="localidade">
-                    <h2>
-                        Registrar Local
-                    </h2>
-                    <p><input class="form-control" type="text" name="Nome" id="Nome" placeholder="Nome"></p>
-                    <p><input class="form-control" type="text" name="longitude" id="longitude" placeholder="Longitude"></p>
-                    <p><input class="form-control" type="text" name="latitude" id="latitude" placeholder="Latitude"></p> 
-                    <div class="row">
-                    <div class="col-md-8"><input class="form-control" type="text" name="Origem" id="Origen" placeholder="Origem"></div>
-                    <div class="col-md-4"><select class="form-select">
-                        <option selected>Andar</option>
-                        <option value="10">Terreo</option>
-                        <option value="1">Primeiro</option>
-                        <option value="2">Segundo</option>
-                        <option value="3">Terceiro</option>
-                        <option value="4">Quarto</option>
-                        <option value="5">Quinto</option>
-                        <option value="6">Sexto</option>
-                        <option value="7">Setimo</option>
-                        <option value="8">Oitavo</option>
-                        <option value="9">Nono</option>
-                    </select></div>
-                    </div><br>
-                    <p><select class="form-select">
-                        <option selected> Tipo de Localidade</option>
-                        <option value="1">Aula</option>
-                        <option value="2">Administrativo</option>
-                        <option value="3">Alimentação</option>
-                        <option value="4">Portão</option>
-                    </select></p>
-                    <div class="row">
-                        <div class="col">
+        <div class="card">
+            <div class="card-header">
+                <h1>Registro</h1>
+            </div>
+            <div class="card-body">
+                <form action="/upload" method="post">
+                    <div id="localidade">
+                        <h2>
+                            Local
+                        </h2>
+                        <p><input class="form-control" type="text" name="Nome" id="Nome" placeholder="Nome"></p>
+                        <p><input class="form-control" type="text" name="longitude" id="longitude" placeholder="Longitude"></p>
+                        <p><input class="form-control" type="text" name="latitude" id="latitude" placeholder="Latitude"></p> 
+                        <div class="row">
+                            <div class="col-md-8">
+                                <input class="form-control" type="text" name="Origem" id="Origen" placeholder="Origem">
+                            </div>
+                            <div class="col-md-4">
+                                <select class="form-select">
+                                    <option selected>Andar</option>
+                                    <option value="10">Terreo</option>
+                                    <option value="1">Primeiro</option>
+                                    <option value="2">Segundo</option>
+                                    <option value="3">Terceiro</option>
+                                    <option value="4">Quarto</option>
+                                    <option value="5">Quinto</option>
+                                    <option value="6">Sexto</option>
+                                    <option value="7">Setimo</option>
+                                    <option value="8">Oitavo</option>
+                                    <option value="9">Nono</option>
+                                </select>
+                            </div>
+                        </div><br>
+                        <p>
                             <select class="form-select">
-                                <option selected>Setor</option>
-                                <option value="1">Básico</option>
-                                <option value="2">Profissional</option>
-                                <option value="3">Saúde</option>
+                                <option selected> Tipo de Localidade</option>
+                                <option value="1">Administrativo</option>
+                                <option value="2">Saude</option>
+                                <option value="3">Aula</option>
+                                <option value="4">Portão</option>
+                                <option value="5">Alimentação</option>
+                                <option value="6">Biblioteca</option>
+                                <option value="7">Instituto</option>
+                                <option value="8">Laboratorio</option>
+                                <option value="10">Faculdade</option>
+                                <option value="9">Outro</option>
                             </select>
-                        </div>
-                        <div class="col"><select class="form-select">
-                            <option selected>Potão</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
+                        </p>
+                        <div class="row">
+                            <div class="col">
+                                <select class="form-select">
+                                    <option selected>Setor</option>
+                                    <option value="1">Básico</option>
+                                    <option value="2">Profissional</option>
+                                    <option value="3">Saúde</option>
+                                </select>
+                            </div>
+                            <div class="col"><select class="form-select">
+                                <option selected>Potão</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <br>
-                <div id="Contato">
-                    <p><h2>Contato</h2> (Opcional)</p>
-                    <input type="text" name="telefone" class="form-control" placeholder="telefone"><br>
-                    <input type="text" name="email" class="form-control" placeholder="email"><br>
-                    <input type="text" name="twitter" class="form-control" placeholder="twitter"><br>
-                    <input type="text" name="instagran" class="form-control" placeholder="instagran"><br>
-                </div>
+                    <br>
+                    <div id="Contato">
+                        <p><h2>Contato</h2> (Opcional)</p>
+                        <input type="text" name="telefone" class="form-control" placeholder="telefone"><br>
+                        <input type="text" name="site" class="form-control" placeholder="site"><br>
+                        <input type="text" name="email" class="form-control" placeholder="email"><br>
+                        <input type="text" name="twitter" class="form-control" placeholder="twitter"><br>
+                        <input type="text" name="instagran" class="form-control" placeholder="instagran"><br>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" name="inicio" class="form-control" placeholder="horario inicial">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="fim" class="form-control" placeholder="horario final"><br><br>
+                            </div>
+                        </div>
+                    </div>
 
-                <button type="button" class="btn btn-primary">enviar</button>
-            </form>
+                    <button class="btn btn-primary">enviar</button>
+                </form>
+            </div>
         </div>
     </main>
     <footer>
@@ -83,4 +102,5 @@
     </footer>
     </div>
 </body>
+<%- include ('./partials/footer.ejs')%>
 </html>

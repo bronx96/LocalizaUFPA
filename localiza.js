@@ -13,13 +13,21 @@ app. get("/", async (req, res) =>{
     res.render("pesquisa", {
     });
 })
+app. get("/registro", async (req, res) =>{
+    res.render("LocalRegistro", {
+    });
+})
 app. get("/local/:id/:nome", async (req, res) =>{
     var id = req.params.id;
     var nome = req.params.nome;
-    res.render("pesquisa", {
+    res.render("Local", {
         id: id,
         nome: nome
     });
+})
+
+app.post("/upload", (req, res) =>{
+    res.send("localidaderegistrada")
 })
 app.listen(8080, () => {
     console,console.log(" servidor na porta 8080: http://localhost:8080");
