@@ -20,10 +20,10 @@ async function selectLocais(){
     const [rows] = await con.query('SELECT * FROM localidades;')
     return await rows;
 }
-async function insertLocais(Nome, longitude, latitude, andar, origem, tipo, setor, portao){
+async function insertLocais(Nome, longitude, latitude, andar, tipo, setor, portao){
     const con = await connect();
-    const sql = 'INSERT INTO Localidades(Nome, longitude, latitude, Andar, Origem, Tipo, Setor, Portao) VALUES(?, ?, ?, ?, ?, ?, ?, ?)'
-    const values = [Nome, longitude, latitude, andar, origem, tipo, setor, portao]
+    const sql = 'INSERT INTO Localidades(Nome, longitude, latitude, Andar, Tipo, Setor, Portao) VALUES(?, ?, ?, ?, ?, ?, ?)'
+    const values = [Nome, longitude, latitude, andar, tipo, setor, portao]
     await con.query(sql, values)
 }
 
