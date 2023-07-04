@@ -1,5 +1,16 @@
 
+@font-face {
+    font-family: 'title';
+    src: url('fontes/ZenMaruGothic-Medium.ttf');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'titleB';
+    src: url('fontes/ZenMaruGothic-Bold.ttf');
+    font-weight: bold;
+}
 nav a{
+    font-family: 'title',Arial, Helvetica, sans-serif;
     margin-left: 5vh;
     color: white;
     text-decoration: none;

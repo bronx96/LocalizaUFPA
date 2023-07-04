@@ -16,15 +16,15 @@
                         <h2>
                             Local
                         </h2>
-                        <p><input class="form-control" type="text" name="Nome" id="Nome" placeholder="Nome"></p>
+                        <p><input class="form-control" type="text" name="nome" id="Nome" placeholder="Nome"></p>
                         <p><input class="form-control" type="text" name="longitude" id="longitude" placeholder="Longitude"></p>
                         <p><input class="form-control" type="text" name="latitude" id="latitude" placeholder="Latitude"></p> 
                         <div class="row">
                             <div class="col-md-8">
-                                <input class="form-control" type="text" name="Origem" id="Origen" placeholder="Origem">
+                                <input class="form-control" type="text" name="origem" id="Origen" placeholder="Origem">
                             </div>
                             <div class="col-md-4">
-                                <select class="form-select">
+                                <select class="form-select" name="andar">
                                     <option selected>Andar</option>
                                     <option value="10">Terreo</option>
                                     <option value="1">Primeiro</option>
@@ -40,7 +40,7 @@
                             </div>
                         </div><br>
                         <p>
-                            <select class="form-select">
+                            <select class="form-select" name="tipo">
                                 <option selected> Tipo de Localidade</option>
                                 <option value="1">Administrativo</option>
                                 <option value="2">Saude</option>
@@ -56,20 +56,20 @@
                         </p>
                         <div class="row">
                             <div class="col">
-                                <select class="form-select">
+                                <select class="form-select" name="setor">
                                     <option selected>Setor</option>
                                     <option value="1">Básico</option>
                                     <option value="2">Profissional</option>
                                     <option value="3">Saúde</option>
                                 </select>
                             </div>
-                            <div class="col"><select class="form-select">
+                            <div class="col"><select class="form-select" name="portao">
                                 <option selected>Potão</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
+                                <option value="7">1</option>
+                                <option value="8">2</option>
+                                <option value="9">3</option>
+                                <option value="10">4</option>
+                                <option value="11">5</option>
                             </select>
                             </div>
                         </div>
@@ -82,12 +82,14 @@
                         <input type="text" name="email" class="form-control" placeholder="email"><br>
                         <input type="text" name="twitter" class="form-control" placeholder="twitter"><br>
                         <input type="text" name="instagran" class="form-control" placeholder="instagran"><br>
+                        Horario
                         <div class="row">
-                            <div class="col-md-6">
-                                <input type="text" name="inicio" class="form-control" placeholder="horario inicial">
+                            <div class="col-md-5">
+                                <input type="text" name="inicio" class="form-control" placeholder="Abre">
                             </div>
-                            <div class="col-md-6">
-                                <input type="text" name="fim" class="form-control" placeholder="horario final"><br><br>
+                            <div class="col-md-1" style="text-align: center;">a</div>
+                            <div class="col-md-5">
+                                <input type="text" name="fim" class="form-control" placeholder="Fecha"><br><br>
                             </div>
                         </div>
                     </div>
