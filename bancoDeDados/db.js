@@ -7,7 +7,7 @@ async function connect(){
         host: 'localhost',
         user: 'root',
         password: '88149460',
-        database: 'teste'
+        database: 'localizaufpa'
       })
     console.log("conectou")
     global.connection = connection;
@@ -22,7 +22,7 @@ async function selectLocais(){
 }
 async function insertLocais(Nome, longitude, latitude, andar, tipo, setor, portao){
     const con = await connect();
-    const sql = 'INSERT INTO Localidades(Nome, longitude, latitude, Andar, Tipo, Setor, Portao) VALUES(?, ?, ?, ?, ?, ?, ?)'
+    const sql = 'INSERT INTO Localidade(Nome, longitude, latitude, Andar, Tipo, Setor, Portao) VALUES(?, ?, ?, ?, ?, ?, ?)'
     const values = [Nome, longitude, latitude, andar, tipo, setor, portao]
     await con.query(sql, values)
 }

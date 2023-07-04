@@ -5,6 +5,11 @@ app.use(express.static('public'))
 //selecionadno o motor de html para o express exibir, ele basicamente pega uma rquivo html e torna legivel para o nosso servidor
 app.set('view engine', 'ejs');
 
+//conexão com as paginas ejs
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+
 //exportar vinculo com banco de dados
 const db = require("./bancoDeDados/db");
 
