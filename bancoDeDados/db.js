@@ -26,5 +26,12 @@ async function insertLocais(Nome, longitude, latitude, andar, tipo, setor, porta
     const values = [Nome, longitude, latitude, andar, tipo, setor, portao]
     await con.query(sql, values)
 }
+async function selectId(tabela, valor){
+    const con = await connect();
+    const sql = 'Select  * FROM ' + tabela + ' where Id = ?;';
+    const values = [valor]
+    const [rows] = await con.query(sql, values);
+    return await rows[0]
+}
 
-module.exports={selectLocais, insertLocais}
+module.exports={selectLocais, insertLocais, selectId}
